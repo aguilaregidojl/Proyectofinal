@@ -7,6 +7,7 @@ package Controlador;
 import Modelo.clientes;
 import Modelo.conexion;
 import Modelo.modeloLoginCliente;
+import Modelo.modeloLoginGestor;
 import Vista.loginCliente;
 import Vista.loginGestor;
 import Vista.resumenCliente;
@@ -38,7 +39,7 @@ public class ctrlLoginGestor implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnIngresogestor) {
-            modeloLoginCliente mod = new modeloLoginCliente();
+            modeloLoginGestor mod = new modeloLoginGestor();
             mod.validarusuario(vista.textusuariogestor, vista.textContraseñaGestor);
             if (mod.isValid() == true) {
                 resumenCliente vista2 = new resumenCliente();
