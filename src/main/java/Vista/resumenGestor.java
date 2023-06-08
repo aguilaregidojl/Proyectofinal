@@ -50,12 +50,18 @@ public class resumenGestor extends javax.swing.JFrame {
         lblTotalactivosfinacieros.setText("Total Activos Financieros");
 
         intTotalclientesgestores.setEditable(false);
+        intTotalclientesgestores.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        intTotalclientesgestores.setText("0000");
         intTotalclientesgestores.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         intTotalactiivosinmobiliarios.setEditable(false);
+        intTotalactiivosinmobiliarios.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        intTotalactiivosinmobiliarios.setText("0000");
         intTotalactiivosinmobiliarios.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         intTotalactivosfinancieros.setEditable(false);
+        intTotalactivosfinancieros.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        intTotalactivosfinancieros.setText("0000");
         intTotalactivosfinancieros.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblPreguntagestores.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
