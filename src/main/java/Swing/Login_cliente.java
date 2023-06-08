@@ -35,11 +35,13 @@ public class Login_cliente extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblUsuariocliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblUsuariocliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUsuariocliente.setText("Usuario");
         lblUsuariocliente.setAlignmentX(0.5F);
         lblUsuariocliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblContraseñacliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblContraseñacliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblContraseñacliente.setText("Contraseña");
         lblContraseñacliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 

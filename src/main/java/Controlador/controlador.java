@@ -166,19 +166,19 @@ public class controlador implements ActionListener {
             con = modelo.getConection();
             st = con.createStatement();
             rs = st.executeQuery(sql);
-            Object[] clientes = new Object[5];
+            Object[] cliente = new Object[5];
             modelotabla = (DefaultTableModel) vista.TablaDatos.getModel();
 
             while (rs.next()) {
-                clientes[0] = rs.getInt("idClientes");
-                clientes[1] = rs.getString("nombre");
-                clientes[2] = rs.getString("apellidos");
-                clientes[3] = rs.getInt("telefono");
-                clientes[4] = rs.getInt("dni");
-                modelotabla.addRow(clientes);
+                cliente[0] = rs.getInt("idClientes");
+                cliente[1] = rs.getString("nombre");
+                cliente[2] = rs.getString("apellidos");
+                cliente[3] = rs.getInt("telefono");
+                cliente[4] = rs.getInt("dni");
+                modelotabla.addRow(cliente);
             }
             vista.TablaDatos.setModel(modelotabla);
-        } catch (Exception err) {
+        } catch (SQLException err) {
         }
     }
 
