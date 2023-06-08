@@ -15,7 +15,7 @@ import javax.swing.JTextField;
  *
  * @author java
  */
-public class modeloLogin {
+public class modeloLoginCliente {
    public void validarusuario(JTextField usuario, JPasswordField contraseña){
        try {
            ResultSet rs;
