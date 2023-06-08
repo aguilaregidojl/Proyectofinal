@@ -37,24 +37,24 @@ public class vistaClientes extends javax.swing.JFrame {
 
         Menu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        botonCrear = new javax.swing.JButton();
-        botonActualizar = new javax.swing.JButton();
-        botonBorrar = new javax.swing.JButton();
+        btnCrear = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         panelActualizar = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        cnameact = new javax.swing.JTextField();
+        txtNombreActualizar = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        csurnameact = new javax.swing.JTextField();
-        botonGuardarActualizar = new javax.swing.JButton();
+        txtApellidoActualizar = new javax.swing.JTextField();
+        btnGuardarActualizar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        botonVolverActualizar = new javax.swing.JButton();
+        btnVolverActualizar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        cidact = new javax.swing.JTextField();
+        intIdActualizar = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        acttelefono = new javax.swing.JTextField();
-        actdni = new javax.swing.JTextField();
+        intTelefonoActualizar = new javax.swing.JTextField();
+        intDniActualizar = new javax.swing.JTextField();
         panelBorrar = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -62,19 +62,19 @@ public class vistaClientes extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         botonVolverBorrar = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        ciddel = new javax.swing.JTextField();
+        intIdBorrar = new javax.swing.JTextField();
         panelCrear = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        cname = new javax.swing.JTextField();
+        txtNombreCrear = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        csurname = new javax.swing.JTextField();
-        botonGuardarCrear = new javax.swing.JButton();
+        txtApellidoCrear = new javax.swing.JTextField();
+        btnGuardarCrear = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        botonVolverCrear = new javax.swing.JButton();
+        btnCancelarCrear = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        ctelefono = new javax.swing.JTextField();
+        intTelefonoCrear = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        cdni = new javax.swing.JTextField();
+        intDniCrear = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablaDatos = new javax.swing.JTable();
 
@@ -82,29 +82,28 @@ public class vistaClientes extends javax.swing.JFrame {
         setTitle("CRUD MySQL");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(0, 0));
-        setPreferredSize(new java.awt.Dimension(733, 478));
         getContentPane().setLayout(null);
 
         jLabel1.setText("¿Qué quieres hacer?");
         Menu.add(jLabel1);
 
-        botonCrear.setText("Crear");
-        botonCrear.setMaximumSize(new java.awt.Dimension(83, 22));
-        botonCrear.setMinimumSize(new java.awt.Dimension(83, 22));
-        botonCrear.setPreferredSize(new java.awt.Dimension(83, 22));
-        Menu.add(botonCrear);
+        btnCrear.setText("Crear");
+        btnCrear.setMaximumSize(new java.awt.Dimension(83, 22));
+        btnCrear.setMinimumSize(new java.awt.Dimension(83, 22));
+        btnCrear.setPreferredSize(new java.awt.Dimension(83, 22));
+        Menu.add(btnCrear);
 
-        botonActualizar.setText("Actualizar");
-        botonActualizar.setMaximumSize(new java.awt.Dimension(83, 22));
-        botonActualizar.setMinimumSize(new java.awt.Dimension(83, 22));
-        botonActualizar.setPreferredSize(new java.awt.Dimension(83, 22));
-        Menu.add(botonActualizar);
+        btnActualizar.setText("Actualizar");
+        btnActualizar.setMaximumSize(new java.awt.Dimension(83, 22));
+        btnActualizar.setMinimumSize(new java.awt.Dimension(83, 22));
+        btnActualizar.setPreferredSize(new java.awt.Dimension(83, 22));
+        Menu.add(btnActualizar);
 
-        botonBorrar.setText("Borrar");
-        botonBorrar.setMaximumSize(new java.awt.Dimension(83, 22));
-        botonBorrar.setMinimumSize(new java.awt.Dimension(83, 22));
-        botonBorrar.setPreferredSize(new java.awt.Dimension(83, 22));
-        Menu.add(botonBorrar);
+        btnBorrar.setText("Borrar");
+        btnBorrar.setMaximumSize(new java.awt.Dimension(83, 22));
+        btnBorrar.setMinimumSize(new java.awt.Dimension(83, 22));
+        btnBorrar.setPreferredSize(new java.awt.Dimension(83, 22));
+        Menu.add(btnBorrar);
 
         getContentPane().add(Menu);
         Menu.setBounds(6, 6, 110, 120);
@@ -114,30 +113,18 @@ public class vistaClientes extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Nombre:");
 
-        cnameact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cnameactActionPerformed(evt);
-            }
-        });
-
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Apellido:");
 
-        csurnameact.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                csurnameactActionPerformed(evt);
-            }
-        });
-
-        botonGuardarActualizar.setText("Guardar");
-        botonGuardarActualizar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGuardarActualizar.setText("Guardar");
+        btnGuardarActualizar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Actualizar Cliente");
 
-        botonVolverActualizar.setText("Cancelar");
-        botonVolverActualizar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolverActualizar.setText("Cancelar");
+        btnVolverActualizar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("ID:");
@@ -159,17 +146,17 @@ public class vistaClientes extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(cidact, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(intIdActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panelActualizarLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(cnameact, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txtNombreActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panelActualizarLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(botonGuardarActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnGuardarActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
-                .addComponent(botonVolverActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnVolverActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panelActualizarLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addGroup(panelActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -178,9 +165,9 @@ public class vistaClientes extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(panelActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(csurnameact, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                    .addComponent(acttelefono)
-                    .addComponent(actdni)))
+                    .addComponent(txtApellidoActualizar, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                    .addComponent(intTelefonoActualizar)
+                    .addComponent(intDniActualizar)))
         );
 
         panelActualizarLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel15, jLabel16, jLabel2, jLabel3});
@@ -193,30 +180,30 @@ public class vistaClientes extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(panelActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cidact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(intIdActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(panelActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cnameact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombreActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(csurnameact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtApellidoActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel15)
-                    .addComponent(acttelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(intTelefonoActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelActualizarLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
                         .addComponent(jLabel16))
                     .addGroup(panelActualizarLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(actdni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(intDniActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(65, 65, 65)
                 .addGroup(panelActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botonGuardarActualizar)
-                    .addComponent(botonVolverActualizar)))
+                    .addComponent(btnGuardarActualizar)
+                    .addComponent(btnVolverActualizar)))
         );
 
         jLayeredPane1.add(panelActualizar);
@@ -256,7 +243,7 @@ public class vistaClientes extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(ciddel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(intIdBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelBorrarLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel8))
@@ -279,7 +266,7 @@ public class vistaClientes extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(panelBorrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
-                    .addComponent(ciddel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(intIdBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addComponent(jLabel8)
                 .addGap(6, 6, 6)
@@ -302,15 +289,15 @@ public class vistaClientes extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Apellido:");
 
-        botonGuardarCrear.setText("Guardar");
-        botonGuardarCrear.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGuardarCrear.setText("Guardar");
+        btnGuardarCrear.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Nuevo Cliente");
 
-        botonVolverCrear.setText("Cancelar");
-        botonVolverCrear.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCancelarCrear.setText("Cancelar");
+        btnCancelarCrear.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel13.setText("Teléfono:");
@@ -326,9 +313,9 @@ public class vistaClientes extends javax.swing.JFrame {
                 .addGroup(panelCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelCrearLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(botonGuardarCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGuardarCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(69, 69, 69)
-                        .addComponent(botonVolverCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnCancelarCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelCrearLayout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -341,10 +328,10 @@ public class vistaClientes extends javax.swing.JFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(6, 6, 6)
                         .addGroup(panelCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cname)
-                            .addComponent(csurname)
-                            .addComponent(ctelefono)
-                            .addComponent(cdni, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))))
+                            .addComponent(txtNombreCrear)
+                            .addComponent(txtApellidoCrear)
+                            .addComponent(intTelefonoCrear)
+                            .addComponent(intDniCrear, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))))
                 .addGap(15, 15, 15))
         );
 
@@ -360,23 +347,23 @@ public class vistaClientes extends javax.swing.JFrame {
                     .addGroup(panelCrearLayout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel5))
-                    .addComponent(cname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombreCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
-                    .addComponent(csurname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtApellidoCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel13)
-                    .addComponent(ctelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(intTelefonoCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cdni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(intDniCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14))
                 .addGap(65, 65, 65)
                 .addGroup(panelCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botonGuardarCrear)
-                    .addComponent(botonVolverCrear)))
+                    .addComponent(btnGuardarCrear)
+                    .addComponent(btnCancelarCrear)))
         );
 
         jLayeredPane1.add(panelCrear);
@@ -418,14 +405,6 @@ public class vistaClientes extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cnameactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnameactActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cnameactActionPerformed
-
-    private void csurnameactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csurnameactActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_csurnameactActionPerformed
 
     /**
      * @param args the command line arguments
@@ -474,25 +453,21 @@ public class vistaClientes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Menu;
     public javax.swing.JTable TablaDatos;
-    public javax.swing.JTextField actdni;
-    public javax.swing.JTextField acttelefono;
-    public javax.swing.JButton botonActualizar;
-    public javax.swing.JButton botonBorrar;
     public javax.swing.JButton botonBorrarBorrar;
-    public javax.swing.JButton botonCrear;
-    public javax.swing.JButton botonGuardarActualizar;
-    public javax.swing.JButton botonGuardarCrear;
-    public javax.swing.JButton botonVolverActualizar;
     public javax.swing.JButton botonVolverBorrar;
-    public javax.swing.JButton botonVolverCrear;
-    public javax.swing.JTextField cdni;
-    public javax.swing.JTextField cidact;
-    public javax.swing.JTextField ciddel;
-    public javax.swing.JTextField cname;
-    public javax.swing.JTextField cnameact;
-    public javax.swing.JTextField csurname;
-    public javax.swing.JTextField csurnameact;
-    public javax.swing.JTextField ctelefono;
+    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnBorrar;
+    public javax.swing.JButton btnCancelarCrear;
+    public javax.swing.JButton btnCrear;
+    public javax.swing.JButton btnGuardarActualizar;
+    public javax.swing.JButton btnGuardarCrear;
+    public javax.swing.JButton btnVolverActualizar;
+    public javax.swing.JTextField intDniActualizar;
+    public javax.swing.JTextField intDniCrear;
+    public javax.swing.JTextField intIdActualizar;
+    public javax.swing.JTextField intIdBorrar;
+    public javax.swing.JTextField intTelefonoActualizar;
+    public javax.swing.JTextField intTelefonoCrear;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -514,5 +489,9 @@ public class vistaClientes extends javax.swing.JFrame {
     private javax.swing.JPanel panelActualizar;
     private javax.swing.JPanel panelBorrar;
     private javax.swing.JPanel panelCrear;
+    public javax.swing.JTextField txtApellidoActualizar;
+    public javax.swing.JTextField txtApellidoCrear;
+    public javax.swing.JTextField txtNombreActualizar;
+    public javax.swing.JTextField txtNombreCrear;
     // End of variables declaration//GEN-END:variables
 }

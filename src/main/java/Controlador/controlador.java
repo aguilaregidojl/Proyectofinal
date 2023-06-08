@@ -45,19 +45,20 @@ public class controlador implements ActionListener {
     public void iniciar() {
         vista.setTitle("Prueba");
         vista.setLocationRelativeTo(null);
+        listar();
     }
     
     private void limpiarCajas() {
-        vista.cname.setText(null);
-        vista.csurname.setText(null);
-        vista.cnameact.setText(null);
-        vista.csurnameact.setText(null);
-        vista.cidact.setText(null);
-        vista.ciddel.setText(null);
-        vista.ctelefono.setText(null);
-        vista.cdni.setText(null);
-        vista.acttelefono.setText(null);
-        vista.actdni.setText(null);
+        vista.txtNombreCrear.setText(null);
+        vista.txtApellidoCrear.setText(null);
+        vista.txtNombreActualizar.setText(null);
+        vista.txtApellidoActualizar.setText(null);
+        vista.intIdActualizar.setText(null);
+        vista.intIdBorrar.setText(null);
+        vista.intTelefonoCrear.setText(null);
+        vista.intDniCrear.setText(null);
+        vista.intTelefonoActualizar.setText(null);
+        vista.intDniActualizar.setText(null);
     }
 
     @Override
