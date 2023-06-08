@@ -31,14 +31,17 @@ public class Login_gestor extends javax.swing.JFrame {
         textusuariogestor = new javax.swing.JTextField();
         btnIngresogestor = new javax.swing.JButton();
         textContraseñaGestor = new javax.swing.JPasswordField();
+        btnVolvergestor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblusuariogestor.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblusuariogestor.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblusuariogestor.setText("Usuario");
         lblusuariogestor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblcontraseñagestor.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblcontraseñagestor.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblcontraseñagestor.setText("Contraseña");
         lblcontraseñagestor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -52,22 +55,35 @@ public class Login_gestor extends javax.swing.JFrame {
         textContraseñaGestor.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         textContraseñaGestor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        btnVolvergestor.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnVolvergestor.setText("Volver");
+        btnVolvergestor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblusuariogestor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblcontraseñagestor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(textusuariogestor)
-                    .addComponent(btnIngresogestor, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                    .addComponent(textContraseñaGestor))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblusuariogestor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblcontraseñagestor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textusuariogestor, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                            .addComponent(textContraseñaGestor)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(btnIngresogestor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(27, 27, 27)
+                        .addComponent(btnVolvergestor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(133, 133, 133))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnIngresogestor, btnVolvergestor});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -79,9 +95,11 @@ public class Login_gestor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblcontraseñagestor)
                     .addComponent(textContraseñaGestor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnIngresogestor)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnIngresogestor)
+                    .addComponent(btnVolvergestor))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         pack();
@@ -124,6 +142,7 @@ public class Login_gestor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnIngresogestor;
+    public javax.swing.JButton btnVolvergestor;
     private javax.swing.JLabel lblcontraseñagestor;
     private javax.swing.JLabel lblusuariogestor;
     public javax.swing.JPasswordField textContraseñaGestor;
