@@ -4,12 +4,10 @@
  */
 package Main;
 
-import Controlador.ctrlTablaClientes;
 import Controlador.ctrlInicio;
 import Modelo.clientes;
 import Modelo.conexion;
 import Vista.pantallaInicio;
-import Vista.vistaClientes;
 
 /**
  *

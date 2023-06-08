@@ -9,7 +9,6 @@ import Modelo.conexion;
 import Vista.loginCliente;
 import Vista.loginGestor;
 import Vista.pantallaInicio;
-import Vista.vistaClientes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

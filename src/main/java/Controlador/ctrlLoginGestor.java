@@ -6,9 +6,7 @@ package Controlador;
 
 import Modelo.clientes;
 import Modelo.conexion;
-import Modelo.modeloLoginCliente;
 import Modelo.modeloLoginGestor;
-import Vista.loginCliente;
 import Vista.loginGestor;
 import Vista.resumenCliente;
 import java.awt.event.ActionEvent;

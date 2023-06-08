@@ -6,7 +6,6 @@ package Controlador;
 
 import Modelo.clientes;
 import Modelo.conexion;
-import Vista.pantallaInicio;
 import Vista.resumenCliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
