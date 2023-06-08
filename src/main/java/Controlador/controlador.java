@@ -157,6 +157,7 @@ public class controlador implements ActionListener {
                 System.err.println(err);
             }
         }
+        
     }
 
     public void listar() {
