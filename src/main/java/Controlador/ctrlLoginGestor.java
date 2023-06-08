@@ -40,10 +40,14 @@ public class ctrlLoginGestor implements ActionListener {
         if (e.getSource() == vista.btnIngresogestor) {
             modeloLoginCliente mod = new modeloLoginCliente();
             mod.validarusuario(vista.textusuariogestor, vista.textContraseñaGestor);
-            resumenCliente vista2 = new resumenCliente();
-            ctrlResumenCliente ctrl = new ctrlResumenCliente(vista2, modelo, clientes);
-            ctrl.iniciar();
-            vista2.setVisible(true);
+            if (mod.isValid() == true) {
+                resumenCliente vista2 = new resumenCliente();
+                ctrlResumenCliente ctrl = new ctrlResumenCliente(vista2, modelo, clientes);
+                ctrl.iniciar();
+                vista2.setVisible(true);
+            } else {
+                //System.exit(1);
+            }
         }
     }
 
