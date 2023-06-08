@@ -29,8 +29,8 @@ public class Login_gestor extends javax.swing.JFrame {
         lblusuariogestor = new javax.swing.JLabel();
         lblcontraseñagestor = new javax.swing.JLabel();
         textusuariogestor = new javax.swing.JTextField();
-        testcontraseñagestor = new javax.swing.JTextField();
         btnIngresogestor = new javax.swing.JButton();
+        textContraseñaGestor = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,17 +45,12 @@ public class Login_gestor extends javax.swing.JFrame {
         textusuariogestor.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         textusuariogestor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        testcontraseñagestor.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        testcontraseñagestor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        testcontraseñagestor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                testcontraseñagestorActionPerformed(evt);
-            }
-        });
-
         btnIngresogestor.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnIngresogestor.setText("Ingreso");
         btnIngresogestor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        textContraseñaGestor.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        textContraseñaGestor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,8 +64,8 @@ public class Login_gestor extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(textusuariogestor)
-                    .addComponent(testcontraseñagestor)
-                    .addComponent(btnIngresogestor, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                    .addComponent(btnIngresogestor, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(textContraseñaGestor))
                 .addGap(133, 133, 133))
         );
         layout.setVerticalGroup(
@@ -83,7 +78,7 @@ public class Login_gestor extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblcontraseñagestor)
-                    .addComponent(testcontraseñagestor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textContraseñaGestor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnIngresogestor)
                 .addContainerGap(129, Short.MAX_VALUE))
@@ -91,10 +86,6 @@ public class Login_gestor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void testcontraseñagestorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testcontraseñagestorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_testcontraseñagestorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,7 +126,7 @@ public class Login_gestor extends javax.swing.JFrame {
     public javax.swing.JButton btnIngresogestor;
     private javax.swing.JLabel lblcontraseñagestor;
     private javax.swing.JLabel lblusuariogestor;
-    public javax.swing.JTextField testcontraseñagestor;
+    public javax.swing.JPasswordField textContraseñaGestor;
     public javax.swing.JTextField textusuariogestor;
     // End of variables declaration//GEN-END:variables
 }

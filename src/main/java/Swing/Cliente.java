@@ -59,12 +59,15 @@ public class Cliente extends javax.swing.JFrame {
         lblResumen.setText("RESUMEN ");
 
         lblTotalingresos.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblTotalingresos.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblTotalingresos.setText("Total Ingresos");
 
         lblTotalcostes.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblTotalcostes.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblTotalcostes.setText("Total Costes");
 
         lblBalance.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblBalance.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblBalance.setText("Balance");
 
         intIngresos.setEditable(false);
@@ -98,18 +101,19 @@ public class Cliente extends javax.swing.JFrame {
                         .addComponent(btnFinancieros, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(59, 59, 59))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(lblBalance)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(intBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(lblTotalcostes)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(intCostes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(lblTotalingresos)
-                                .addGap(39, 39, 39)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(intIngresos, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -132,6 +136,9 @@ public class Cliente extends javax.swing.JFrame {
                         .addComponent(lblResumen)))
                 .addContainerGap(82, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblBalance, lblTotalcostes, lblTotalingresos});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -206,12 +213,12 @@ public class Cliente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnFinancieros;
     public javax.swing.JButton btnInmobiliarios;
-    private javax.swing.JTextField intBalance;
-    private javax.swing.JTextField intCostes;
-    private javax.swing.JTextField intIngresos;
+    public javax.swing.JTextField intBalance;
+    public javax.swing.JTextField intCostes;
+    public javax.swing.JTextField intIngresos;
     private javax.swing.JLabel lblBalance;
     private javax.swing.JLabel lblClientes;
-    private javax.swing.JLabel lblNombrecliente;
+    public javax.swing.JLabel lblNombrecliente;
     private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblResumen;
     private javax.swing.JLabel lblTotalcostes;
