@@ -14,7 +14,7 @@ import java.sql.SQLException;
  */
 public class conexion {
     
-    public static Connection getConection() throws SQLException {
+    public Connection getConection() throws SQLException {
         Connection con = null;
         String base = "fortunadb"; //Nombre de la base de datos
         String url = "jdbc:mysql://www.db4free.net:3306/" + base; //Direccion, puerto y nombre de la Base de Datos

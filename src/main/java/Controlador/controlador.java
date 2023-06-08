@@ -5,7 +5,7 @@
 package Controlador;
 
 import Modelo.*;
-import static Modelo.conexion.getConection;
+import Modelo.conexion;
 import Vista.*;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
@@ -24,9 +24,9 @@ import javax.swing.table.DefaultTableModel;
  */
 public class controlador implements ActionListener {
 
-    private vistaClientes vista;
-    private conexion modelo;
-    private clientes clientes;
+    private final vistaClientes vista;
+    private final conexion modelo;
+    private final clientes clientes;
     Connection con;
     PreparedStatement ps = null;
     DefaultTableModel modelotabla;
@@ -163,7 +163,7 @@ public class controlador implements ActionListener {
 
         String sql = "SELECT * FROM Clientes";
         try {
-            con = getConection();
+            con = modelo.getConection();
             st = con.createStatement();
             rs = st.executeQuery(sql);
             Object[] clientes = new Object[5];
@@ -178,7 +178,7 @@ public class controlador implements ActionListener {
                 modelotabla.addRow(clientes);
             }
             vista.TablaDatos.setModel(modelotabla);
-        } catch (Exception e) {
+        } catch (Exception err) {
         }
     }
 
