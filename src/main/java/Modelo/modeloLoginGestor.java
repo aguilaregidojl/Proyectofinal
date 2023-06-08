@@ -15,13 +15,13 @@ import javax.swing.JTextField;
  *
  * @author java
  */
-public class modeloLoginCliente {
+public class modeloLoginGestor {
    public void validarusuario(JTextField usuario, JPasswordField contraseña){
        try {
            ResultSet rs;
            PreparedStatement ps;
            Modelo.conexion objetoconexion = new Modelo.conexion();
-           String consulta="SELECT * FROM Clientes WHERE Clientes.dni = (?) AND Clientes.telefono = (?);";
+           String consulta="SELECT * FROM Gestores WHERE Gestores.dni = (?) AND Gestores.telefono = (?);";
            ps=objetoconexion.getConection().prepareStatement(consulta);
            
            //transformar password en variable string tipo cadena y llamamos la variable string
@@ -32,10 +32,12 @@ public class modeloLoginCliente {
            
            rs = ps.executeQuery();
            if (rs.next()) {
-                JOptionPane.showInputDialog("El usuario es correcto");
+               JOptionPane.showInputDialog("El usuario es correcto");
+               
            }
            else{
-              JOptionPane.showInputDialog("Usuario incorrecto vuelva a intentar");
+               JOptionPane.showInputDialog("Usuario incorrecto vuelva a intentar");
+              
            }
            
            
