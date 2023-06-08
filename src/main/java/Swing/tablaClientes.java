@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Swing;
-import static Modelo.conexion.getConection;
+import Modelo.conexion;
 import java.awt.HeadlessException;
 import java.sql.*;
 import javax.swing.JOptionPane;
