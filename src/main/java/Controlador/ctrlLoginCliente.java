@@ -37,12 +37,12 @@ public class ctrlLoginCliente implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnIngresocliente) {
-            //String user = vista.textUsuariocliente.getText();
-            //String pwd = vista.textContraseñaCliente.getText();
             modeloLogin mod = new modeloLogin();
             mod.validarusuario(vista.textUsuariocliente, vista.textContraseñaCliente);
             resumenCliente vista2 = new resumenCliente();
             ctrlResumenCliente ctrl = new ctrlResumenCliente(vista2, modelo, clientes);
+            ctrl.iniciar();
+            vista2.setVisible(true);
             
         }
     }

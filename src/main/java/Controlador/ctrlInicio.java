@@ -7,6 +7,7 @@ package Controlador;
 import Modelo.clientes;
 import Modelo.conexion;
 import Vista.loginCliente;
+import Vista.loginGestor;
 import Vista.pantallaInicio;
 import Vista.vistaClientes;
 import java.awt.event.ActionEvent;
@@ -44,8 +45,8 @@ public class ctrlInicio implements ActionListener {
             vista.setVisible(true);
         }
         if (e.getSource() == vista.btnTipogestor) {
-            vistaClientes vista = new vistaClientes();
-            ctrlTablaClientes ctrl = new ctrlTablaClientes(vista, modelo, clientes);
+            loginGestor vista = new loginGestor();
+            ctrlLoginGestor ctrl = new ctrlLoginGestor(vista, modelo, clientes);
             ctrl.iniciar();
             vista.setVisible(true);
         }
