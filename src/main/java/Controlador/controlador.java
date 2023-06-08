@@ -104,6 +104,7 @@ public class controlador implements ActionListener {
             limpiarCajas();
         }
         if (e.getSource() == vista.btnGuardarActualizar) {
+            clientes.setId(Integer.parseInt(vista.intIdActualizar.getText()));
             clientes.setNombre(vista.txtNombreActualizar.getText());
             clientes.setApellidos(vista.txtApellidoActualizar.getText());
             clientes.setTelefono(Integer.parseInt(vista.intTelefonoActualizar.getText()));
@@ -125,10 +126,36 @@ public class controlador implements ActionListener {
                 actutabla();
                 con.close();
 
-            } catch (HeadlessException | SQLException e) {
-                System.err.println(e);
+            } catch (HeadlessException | SQLException err) {
+                System.err.println(err);
             }
 
+        }
+
+        if (e.getSource() == vista.btnGuardarCrear) {
+            try {
+                con = modelo.getConection();
+                ps = con.prepareStatement("INSERT INTO Clientes (nombre, apellidos, telefono, dni) VALUES(?,?,?,?) ");
+                ps.setString(1, vista.txtNombreCrear.getText());
+                ps.setString(2, vista.txtApellidoCrear.getText());
+                ps.setString(3, vista.intTelefonoCrear.getText());
+                ps.setString(4, vista.intDniCrear.getText());
+
+                int res = ps.executeUpdate();
+
+                if (res > 0) {
+                    JOptionPane.showMessageDialog(null, "Cliente guardado");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error al Crear Cliente");
+                }
+
+                limpiarCajas();
+                actutabla();
+                con.close();
+
+            } catch (HeadlessException | SQLException err) {
+                System.err.println(err);
+            }
         }
     }
 

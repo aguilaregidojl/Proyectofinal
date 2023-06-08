@@ -558,7 +558,7 @@ public class tablaClientes extends javax.swing.JFrame {
         String actsurname = csurnameact.getText();
         
         try {
-            con = getConection();
+            //con = getConection();
             ps = con.prepareStatement("UPDATE Clientes SET nombre='" +actname+"', apellidos='" +actsurname+ "', telefono='" +ctelefono+ "', dni='" + actdni+ "' WHERE idClientes='" +actid+"'");
 
             int res = ps.executeUpdate();
@@ -602,7 +602,7 @@ public class tablaClientes extends javax.swing.JFrame {
         // Botón Guardar en Crear
 
         try {
-            con = getConection();
+            //con = getConection();
             ps = con.prepareStatement("INSERT INTO Clientes (nombre, apellidos, telefono, dni) VALUES(?,?,?,?) ");
             ps.setString(1, cname.getText());
             ps.setString(2, csurname.getText());
@@ -647,7 +647,7 @@ public class tablaClientes extends javax.swing.JFrame {
         int actid = Integer.parseInt(ciddel.getText());
         
         try {
-            con = getConection();
+            //con = getConection();
             ps = con.prepareStatement("DELETE FROM Clientes WHERE idClientes='" +actid+"'");
 
             int res = ps.executeUpdate();
@@ -730,7 +730,7 @@ public class tablaClientes extends javax.swing.JFrame {
 
         String sql = "SELECT * FROM Clientes";
         try {
-            con = getConection();
+            //con = getConection();
             st = con.createStatement();
             rs = st.executeQuery(sql);
             Object[] clientes = new Object[5];
