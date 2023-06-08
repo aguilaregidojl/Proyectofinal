@@ -32,10 +32,10 @@ public class modeloLoginCliente {
            
            rs = ps.executeQuery();
            if (rs.next()) {
-                JOptionPane.showInputDialog("El usuario es correcto");
+                JOptionPane.showMessageDialog(null, "El usuario es correcto");
            }
            else{
-              JOptionPane.showInputDialog("Usuario incorrecto vuelva a intentar");
+              JOptionPane.showMessageDialog(null, "Usuario incorrecto vuelva a intentar");
            }
            
            
