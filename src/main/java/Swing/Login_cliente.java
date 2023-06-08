@@ -29,8 +29,8 @@ public class Login_cliente extends javax.swing.JFrame {
         lblUsuariocliente = new javax.swing.JLabel();
         lblContraseñacliente = new javax.swing.JLabel();
         textUsuariocliente = new javax.swing.JTextField();
-        textContraseñacliente = new javax.swing.JTextField();
         btnIngresocliente = new javax.swing.JButton();
+        textContraseñaCliente = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,13 +55,12 @@ public class Login_cliente extends javax.swing.JFrame {
             }
         });
 
-        textContraseñacliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        textContraseñacliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        textContraseñacliente.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-
         btnIngresocliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnIngresocliente.setText("Ingreso");
         btnIngresocliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        textContraseñaCliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        textContraseñaCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,8 +74,8 @@ public class Login_cliente extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnIngresocliente, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-                    .addComponent(textContraseñacliente)
-                    .addComponent(textUsuariocliente))
+                    .addComponent(textUsuariocliente)
+                    .addComponent(textContraseñaCliente))
                 .addContainerGap(127, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -89,7 +88,7 @@ public class Login_cliente extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblContraseñacliente)
-                    .addComponent(textContraseñacliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textContraseñaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addComponent(btnIngresocliente)
                 .addContainerGap(114, Short.MAX_VALUE))
@@ -141,7 +140,7 @@ public class Login_cliente extends javax.swing.JFrame {
     public javax.swing.JButton btnIngresocliente;
     private javax.swing.JLabel lblContraseñacliente;
     private javax.swing.JLabel lblUsuariocliente;
-    public javax.swing.JTextField textContraseñacliente;
+    public javax.swing.JPasswordField textContraseñaCliente;
     public javax.swing.JTextField textUsuariocliente;
     // End of variables declaration//GEN-END:variables
 }
