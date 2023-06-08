@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package PRUEBA;
+package Modelo;
 
 
 import java.sql.PreparedStatement;
@@ -15,11 +15,11 @@ import javax.swing.JTextField;
  *
  * @author java
  */
-public class login {
+public class modeloLogin {
    public void validarusuario(JTextField usuario, JPasswordField contraseña){
        try {
-           ResultSet rs=null;
-           PreparedStatement ps=null;
+           ResultSet rs;
+           PreparedStatement ps;
            Modelo.conexion objetoconexion = new Modelo.conexion();
            String consulta="SELECT * FROM Clientes WHERE Clientes.dni = (?) AND Clientes.telefono = (?);";
            ps=objetoconexion.getConection().prepareStatement(consulta);

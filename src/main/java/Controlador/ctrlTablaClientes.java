@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author java
  */
-public class controlador implements ActionListener {
+public class ctrlTablaClientes implements ActionListener {
 
     private final vistaClientes vista;
     private final conexion modelo;
@@ -34,7 +34,7 @@ public class controlador implements ActionListener {
     ResultSet rs;
     int id;
 
-    public controlador(vistaClientes vista, conexion modelo, clientes clientes) {
+    public ctrlTablaClientes(vistaClientes vista, conexion modelo, clientes clientes) {
         this.vista = vista;
         this.modelo = modelo;
         this.clientes = clientes;

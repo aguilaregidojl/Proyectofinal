@@ -4,10 +4,12 @@
  */
 package Main;
 
+import Controlador.ctrlTablaClientes;
 import Controlador.ctrlInicio;
 import Modelo.clientes;
 import Modelo.conexion;
 import Vista.pantallaInicio;
+import Vista.vistaClientes;
 
 /**
  *
@@ -22,6 +24,7 @@ public class main2 {
 
         ctrlInicio controlador = new ctrlInicio(vista, modelo, clientes);
         controlador.iniciar();
+
         vista.setVisible(true);
 
     }

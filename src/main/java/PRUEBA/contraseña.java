@@ -95,7 +95,7 @@ public class contraseña extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-PRUEBA.login login = new PRUEBA.login();
+Modelo.modeloLogin login = new Modelo.modeloLogin();
 login.validarusuario(jtexcontraseña, jpasword);
       
         // TODO add your handling code here:

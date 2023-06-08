@@ -6,6 +6,7 @@ package Controlador;
 
 import Modelo.clientes;
 import Modelo.conexion;
+import Vista.loginCliente;
 import Vista.pantallaInicio;
 import Vista.vistaClientes;
 import java.awt.event.ActionEvent;
@@ -28,23 +29,25 @@ public class ctrlInicio implements ActionListener {
         this.vista.btnTipocliente.addActionListener(this);
         this.vista.btnTipogestor.addActionListener(this);
     }
-    
+
     public void iniciar() {
-        vista.setTitle("Prueba");
+        vista.setTitle("Bienvenido a Fortuna Investments");
         vista.setLocationRelativeTo(null);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnTipocliente) {
-            vistaClientes nueva = new vistaClientes();
-            nueva.setVisible(true);
-            
-            
-            
+            loginCliente vista = new loginCliente();
+            ctrlLoginCliente ctrl = new ctrlLoginCliente(vista, modelo, clientes);
+            ctrl.iniciar();
+            vista.setVisible(true);
         }
         if (e.getSource() == vista.btnTipogestor) {
-            
+            vistaClientes vista = new vistaClientes();
+            ctrlTablaClientes ctrl = new ctrlTablaClientes(vista, modelo, clientes);
+            ctrl.iniciar();
+            vista.setVisible(true);
         }
     }
 

@@ -4,7 +4,7 @@
  */
 package Vista;
 
-import Controlador.controlador;
+import Controlador.ctrlTablaClientes;
 import Modelo.clientes;
 import Modelo.conexion;
 import javax.swing.table.*;
@@ -93,22 +93,12 @@ public class vistaClientes extends javax.swing.JFrame {
         btnCrear.setMaximumSize(new java.awt.Dimension(83, 22));
         btnCrear.setMinimumSize(new java.awt.Dimension(83, 22));
         btnCrear.setPreferredSize(new java.awt.Dimension(83, 22));
-        btnCrear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCrearActionPerformed(evt);
-            }
-        });
         Menu.add(btnCrear);
 
         btnActualizar.setText("Actualizar");
         btnActualizar.setMaximumSize(new java.awt.Dimension(83, 22));
         btnActualizar.setMinimumSize(new java.awt.Dimension(83, 22));
         btnActualizar.setPreferredSize(new java.awt.Dimension(83, 22));
-        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizarActionPerformed(evt);
-            }
-        });
         Menu.add(btnActualizar);
 
         btnBorrar.setText("Borrar");
@@ -417,14 +407,6 @@ public class vistaClientes extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarActionPerformed
-
-    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCrearActionPerformed
 
     /**
      * @param args the command line arguments
