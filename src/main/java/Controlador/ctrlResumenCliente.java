@@ -8,6 +8,7 @@ import Modelo.clientes;
 import Modelo.conexion;
 import Swing.tablaClientes;
 import Vista.resumenCliente;
+import Vista.vistaActivosClienteFinanza;
 import Vista.vistaClientes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,11 +41,11 @@ public class ctrlResumenCliente implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==vista.btnClientes) {
-            vistaClientes vista = new vistaClientes();
-            ctrlVistaClientes ctrl = new ctrlVistaClientes(vista, modelo, clientes);
-            ctrl.iniciar();
-            vista.setVisible(true);
+        if (e.getSource()==vista.btnFinancieros) {
+            vistaActivosClienteFinanza vista = new vistaActivosClienteFinanza();
+            //ctrlVistaClientes ctrl = new ctrlVistaClientes(vista, modelo, clientes);
+            //ctrl.iniciar();
+            //vista.setVisible(true);
         }
     }
 
