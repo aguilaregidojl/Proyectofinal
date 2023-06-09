@@ -9,14 +9,20 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  *
  * @author java
  */
+@Getter
+@Setter
 public class modeloLoginCliente {
-    
+
     boolean valid = false;
+
+    int id;
 
     public boolean isValid() {
         return valid;
@@ -24,7 +30,7 @@ public class modeloLoginCliente {
 
     public void validarusuario(JTextField usuario, JPasswordField contraseña) {
         try {
-            
+
             ResultSet rs;
             PreparedStatement ps;
             Modelo.conexion objetoconexion = new Modelo.conexion();
@@ -41,6 +47,7 @@ public class modeloLoginCliente {
             if (rs.next()) {
                 JOptionPane.showMessageDialog(null, "El usuario es correcto");
                 valid = true;
+
             } else {
                 JOptionPane.showMessageDialog(null, "Usuario incorrecto vuelva a intentar");
                 valid = false;
