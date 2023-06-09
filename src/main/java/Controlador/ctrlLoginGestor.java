@@ -45,7 +45,8 @@ public class ctrlLoginGestor implements ActionListener {
                 ctrl.iniciar();
                 vista2.setVisible(true);
             } else {
-                //System.exit(1);
+                vista.textContraseñaGestor.setText(null);
+                vista.textusuariogestor.setText(null);
             }
         }
     }

@@ -4,7 +4,7 @@
  */
 package Vista;
 
-import Controlador.ctrlTablaClientes;
+import Controlador.ctrlVistaClientes;
 import Modelo.clientes;
 import Modelo.conexion;
 import javax.swing.table.*;

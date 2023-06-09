@@ -6,7 +6,9 @@ package Controlador;
 
 import Modelo.clientes;
 import Modelo.conexion;
+import Swing.tablaClientes;
 import Vista.resumenCliente;
+import Vista.vistaClientes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,6 +21,7 @@ public class ctrlResumenCliente implements ActionListener {
     private final resumenCliente vista;
     private final conexion modelo;
     private final clientes clientes;
+    int id;
 
     public ctrlResumenCliente(resumenCliente vista, conexion modelo, clientes clientes) {
         this.vista = vista;
@@ -32,11 +35,17 @@ public class ctrlResumenCliente implements ActionListener {
     public void iniciar() {
         vista.setTitle("Resumen de Cliente");
         vista.setLocationRelativeTo(null);
+        id = clientes.getId();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (e.getSource()==vista.btnClientes) {
+            vistaClientes vista = new vistaClientes();
+            ctrlVistaClientes ctrl = new ctrlVistaClientes(vista, modelo, clientes);
+            ctrl.iniciar();
+            vista.setVisible(true);
+        }
     }
 
 }
