@@ -1,6 +1,6 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+* Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Modelo;
 
@@ -34,14 +34,24 @@ public class modeloLoginCliente {
             ResultSet rs;
             PreparedStatement ps;
             Modelo.conexion objetoconexion = new Modelo.conexion();
-            String consulta = "SELECT * FROM Clientes WHERE Clientes.dni = (?) AND Clientes.telefono = (?);";
+            String consulta = "SELECT * FROM Clientes WHERE Clientes.dni = (?) AND Clientes.telefono = (?) ;";
             ps = objetoconexion.getConection().prepareStatement(consulta);
 
-            //transformar password en variable string tipo cadena y llamamos la variable string
+//transformar password en variable string tipo cadena y llamamos la variable string
             String contra = String.valueOf(contraseña.getPassword());
-
             ps.setString(1, usuario.getText());
             ps.setString(2, contra);
+
+            ResultSet rs2;
+            PreparedStatement ps2;
+            String consulta2 = "SELECT * FROM Clientes WHERE Clientes.dni ='" + (usuario.getText()) + "'";
+            ps2 = objetoconexion.getConection().prepareStatement(consulta2);
+            rs2 = ps2.executeQuery(consulta2);
+            int idcliente;
+            while (rs2.next()) {
+                idcliente = rs2.getInt("idClientes");
+                System.out.println(idcliente);
+            }
 
             rs = ps.executeQuery();
             if (rs.next()) {
