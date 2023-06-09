@@ -26,22 +26,23 @@ public class modeloResumenCliente {
     Statement st;
     ResultSet rs;
     int id;
+    double ingresos;
     
     clientes clientes = new clientes();
 
     public void listarResumen() {
-        String sql = "SELECT SUM(Ingresos) FROM (SELECT ingreso_anual AS Ingresos FROM Finanzas UNION ALL SELECT ingresos_alquiler AS Ingresos FROM Inmuebles) AS Ingreso;";
+        String sql = "SELECT SUM(Ingresos) FROM (SELECT ingreso_anual AS Ingresos FROM Finanzas UNION ALL SELECT ingresos_alquiler AS Ingresos FROM Inmuebles) AS IngresosTotales;";
         try {
-            //con = getConection();
-            st = con.createStatement();
-            rs = st.executeQuery(sql);
-            int ingresos = 0;
-
+            Modelo.conexion con = new Modelo.conexion();
+            ps = con.getConection().prepareStatement(sql);
+            //st = con.createStatement();
+            rs = ps.executeQuery(sql);
+            
             while (rs.next()) {
-                ingresos = rs.getInt("Ingresos");
+                ingresos = rs.getDouble("IngresosTotales");
+                System.out.println(ingresos);
                 clientes.setIngresos(ingresos);
             }
-
         } catch (SQLException err) {
         }
     }

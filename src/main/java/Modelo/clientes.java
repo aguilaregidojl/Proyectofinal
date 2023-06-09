@@ -20,9 +20,9 @@ public class clientes {
     private String apellidos;
     private int telefono;
     private int dni;
-    private int ingresos;
-    private int costes;
-    private int balance;
+    private double ingresos;
+    private double costes;
+    private double balance;
     
     
 }

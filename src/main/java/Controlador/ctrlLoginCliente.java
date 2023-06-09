@@ -7,6 +7,7 @@ package Controlador;
 import Modelo.clientes;
 import Modelo.conexion;
 import Modelo.modeloLoginCliente;
+import Modelo.modeloResumenCliente;
 import Vista.loginCliente;
 import Vista.resumenCliente;
 import java.awt.event.ActionEvent;
@@ -41,7 +42,8 @@ public class ctrlLoginCliente implements ActionListener {
             mod.validarusuario(vista.textUsuariocliente, vista.textContraseñaCliente);
             if (mod.isValid() == true) {
                 resumenCliente vista2 = new resumenCliente();
-                ctrlResumenCliente ctrl = new ctrlResumenCliente(vista2, modelo, clientes);
+                modeloResumenCliente mod2 = new modeloResumenCliente();
+                ctrlResumenCliente ctrl = new ctrlResumenCliente(vista2, modelo, clientes, mod2);
                 ctrl.iniciar();
                 vista2.setVisible(true);
             } else {

@@ -6,6 +6,7 @@ package Controlador;
 
 import Modelo.clientes;
 import Modelo.conexion;
+import Modelo.modeloResumenCliente;
 import Swing.tablaClientes;
 import Vista.resumenCliente;
 import Vista.vistaActivosClienteFinanza;
@@ -22,12 +23,14 @@ public class ctrlResumenCliente implements ActionListener {
     private final resumenCliente vista;
     private final conexion modelo;
     private final clientes clientes;
+    private final modeloResumenCliente mod2;
     int id;
 
-    public ctrlResumenCliente(resumenCliente vista, conexion modelo, clientes clientes) {
+    public ctrlResumenCliente(resumenCliente vista, conexion modelo, clientes clientes, modeloResumenCliente mod2) {
         this.vista = vista;
         this.modelo = modelo;
         this.clientes = clientes;
+        this.mod2 = mod2;
         this.vista.btnFinancieros.addActionListener(this);
         this.vista.btnInmobiliarios.addActionListener(this);
 
@@ -37,7 +40,8 @@ public class ctrlResumenCliente implements ActionListener {
         vista.setTitle("Resumen de Cliente");
         vista.setLocationRelativeTo(null);
         id = clientes.getId();
-        vista.intIngresos.setText(Integer.toString(clientes.getIngresos()));
+        mod2.listarResumen();
+        vista.intIngresos.setText(Double.toString(mod2.getIngresos()));
     }
 
     @Override
