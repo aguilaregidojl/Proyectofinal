@@ -25,45 +25,49 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lblNombregestor" min="-2" pref="197" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="btnInmobiliariosgestores" linkSize="3" min="-2" pref="123" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                          <Component id="btnFinancierosgestores" linkSize="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                          <Component id="lblResumen" min="-2" pref="138" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="lblTotalactivosinmobiliarios" linkSize="4" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblTotalclientesgestores" linkSize="4" min="-2" pref="146" max="-2" attributes="0"/>
-                                      <Component id="lblTotalactivosfinacieros" linkSize="4" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="intTotalactivosfinancieros" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="intTotalactiivosinmobiliarios" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="intTotalclientesgestores" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
-                                  </Group>
+              <Component id="lblNombregestor" min="-2" pref="197" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="132" pref="196" max="32767" attributes="0"/>
+                      <Component id="lblResumen" min="-2" pref="138" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="81" pref="107" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lblTotalactivosinmobiliarios" linkSize="4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTotalclientesgestores" linkSize="4" min="-2" pref="146" max="-2" attributes="0"/>
+                                  <Component id="lblTotalactivosfinacieros" linkSize="4" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="lblPreguntagestores" min="-2" pref="218" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="intTotalactivosfinancieros" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="intTotalactiivosinmobiliarios" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="intTotalclientesgestores" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
+                          <Component id="lblPreguntagestores" min="-2" pref="218" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <Component id="btnInmobiliariosgestores" linkSize="3" min="-2" pref="123" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="btnFinancierosgestores" linkSize="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnClientes" linkSize="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="77" max="32767" attributes="0"/>
+                  <EmptySpace pref="93" max="32767" attributes="0"/>
                   <Component id="lblGestores" min="-2" pref="73" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="268" max="-2" attributes="0"/>
               </Group>
@@ -98,6 +102,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnInmobiliariosgestores" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnFinancierosgestores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnClientes" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
           </Group>
@@ -174,7 +179,8 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xbf;Qu&#xe9; tipo de activo quieres consultar?"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="&#xbf;Qu&#xe9; gesti&#xf3;n quieres realizar?"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblGestores">
@@ -236,6 +242,19 @@
         </Property>
         <Property name="text" type="java.lang.String" value="NOMBRE GESTOR"/>
         <Property name="verticalAlignment" type="int" value="3"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnClientes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Clientes"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
