@@ -21,8 +21,7 @@ import lombok.Setter;
 public class modeloLoginCliente {
 
     boolean valid = false;
-
-    int id;
+    clientes clientes = new clientes();
 
     public boolean isValid() {
         return valid;
@@ -44,13 +43,13 @@ public class modeloLoginCliente {
 
             ResultSet rs2;
             PreparedStatement ps2;
-            String consulta2 = "SELECT * FROM Clientes WHERE Clientes.dni ='" + (usuario.getText()) + "'";
+            String consulta2 = "SELECT idClientes FROM Clientes WHERE Clientes.dni ='" + (usuario.getText()) + "'";
             ps2 = objetoconexion.getConection().prepareStatement(consulta2);
             rs2 = ps2.executeQuery(consulta2);
             int idcliente;
             while (rs2.next()) {
                 idcliente = rs2.getInt("idClientes");
-                System.out.println(idcliente);
+                clientes.setId(idcliente);
             }
 
             rs = ps.executeQuery();
