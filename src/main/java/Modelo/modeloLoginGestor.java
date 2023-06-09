@@ -35,6 +35,17 @@ public class modeloLoginGestor {
 
             ps.setString(1, usuario.getText());
             ps.setString(2, contra);
+            
+            ResultSet rs2;
+            PreparedStatement ps2;
+            String consulta2 = "SELECT * FROM Gestores WHERE Gestores.dni ='" + (usuario.getText()) + "'";
+            ps2 = objetoconexion.getConection().prepareStatement(consulta2);
+            rs2 = ps2.executeQuery(consulta2);
+            int idgestores;
+            while (rs2.next()) {
+                idgestores = rs2.getInt("idGestores");
+                System.out.println(idgestores);
+            }
 
             rs = ps.executeQuery();
             if (rs.next()) {
