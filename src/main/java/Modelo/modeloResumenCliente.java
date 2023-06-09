@@ -4,6 +4,7 @@
  */
 package Modelo;
 
+import Controlador.ctrlResumenCliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +18,8 @@ import lombok.Setter;
  *
  * @author java
  */
-@Getter @Setter
+@Getter
+@Setter
 public class modeloResumenCliente {
 
     Connection con;
@@ -27,21 +29,22 @@ public class modeloResumenCliente {
     ResultSet rs;
     int id;
     double ingresos;
-    
+
     clientes clientes = new clientes();
 
     public void listarResumen() {
-        String sql = "SELECT SUM(Ingresos) FROM (SELECT ingreso_anual AS Ingresos FROM Finanzas UNION ALL SELECT ingresos_alquiler AS Ingresos FROM Inmuebles) AS IngresosTotales;";
+        String sql = "SELECT SUM(Ingresos) FROM (SELECT ingreso_anual AS Ingresos FROM Finanzas UNION ALL SELECT ingresos_alquiler AS Ingresos FROM Inmuebles) AS Ingresos;";
+
         try {
             Modelo.conexion con = new Modelo.conexion();
             ps = con.getConection().prepareStatement(sql);
             //st = con.createStatement();
             rs = ps.executeQuery(sql);
-            
+
             while (rs.next()) {
-                ingresos = rs.getDouble("IngresosTotales");
-                System.out.println(ingresos);
+                ingresos = rs.getDouble("SUM(Ingresos)");
                 clientes.setIngresos(ingresos);
+
             }
         } catch (SQLException err) {
         }
