@@ -37,6 +37,7 @@ public class ctrlResumenCliente implements ActionListener {
         vista.setTitle("Resumen de Cliente");
         vista.setLocationRelativeTo(null);
         id = clientes.getId();
+        vista.intIngresos.setText(Integer.toString(clientes.getIngresos()));
     }
 
     @Override

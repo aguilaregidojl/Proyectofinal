@@ -10,11 +10,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.table.DefaultTableModel;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  *
  * @author java
  */
+@Getter @Setter
 public class modeloResumenCliente {
 
     Connection con;
@@ -23,9 +26,11 @@ public class modeloResumenCliente {
     Statement st;
     ResultSet rs;
     int id;
+    
+    clientes clientes = new clientes();
 
     public void listarResumen() {
-        String sql = "SELECT * FROM Finanzas";
+        String sql = "SELECT SUM(Ingresos) FROM (SELECT ingreso_anual AS Ingresos FROM Finanzas UNION ALL SELECT ingresos_alquiler AS Ingresos FROM Inmuebles) AS Ingreso;";
         try {
             //con = getConection();
             st = con.createStatement();
@@ -34,6 +39,7 @@ public class modeloResumenCliente {
 
             while (rs.next()) {
                 ingresos = rs.getInt("Ingresos");
+                clientes.setIngresos(ingresos);
             }
 
         } catch (SQLException err) {
