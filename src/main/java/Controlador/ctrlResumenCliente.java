@@ -19,6 +19,7 @@ public class ctrlResumenCliente implements ActionListener {
     private final resumenCliente vista;
     private final conexion modelo;
     private final clientes clientes;
+    int id;
 
     public ctrlResumenCliente(resumenCliente vista, conexion modelo, clientes clientes) {
         this.vista = vista;
@@ -32,6 +33,7 @@ public class ctrlResumenCliente implements ActionListener {
     public void iniciar() {
         vista.setTitle("Resumen de Cliente");
         vista.setLocationRelativeTo(null);
+        id = clientes.getId();
     }
 
     @Override
