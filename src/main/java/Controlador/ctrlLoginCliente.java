@@ -45,7 +45,8 @@ public class ctrlLoginCliente implements ActionListener {
                 ctrl.iniciar();
                 vista2.setVisible(true);
             } else {
-                System.exit(1);
+                vista.textContraseñaCliente.setText(null);
+                vista.textUsuariocliente.setText(null);
             }
 
         }
