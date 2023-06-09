@@ -4,7 +4,7 @@
  */
 package Main;
 
-import Controlador.ctrlTablaClientes;
+import Controlador.ctrlVistaClientes;
 import Modelo.clientes;
 import Modelo.conexion;
 import Vista.vistaClientes;
@@ -20,7 +20,7 @@ public class main {
         clientes clientes = new clientes();
         vistaClientes vista = new vistaClientes();
 
-        ctrlTablaClientes controlador = new ctrlTablaClientes(vista, conexion, clientes);
+        ctrlVistaClientes controlador = new ctrlVistaClientes(vista, conexion, clientes);
         controlador.iniciar();
         vista.setVisible(true);
     }

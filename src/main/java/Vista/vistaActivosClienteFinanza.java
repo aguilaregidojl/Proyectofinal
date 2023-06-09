@@ -4,7 +4,7 @@
  */
 package Vista;
 
-import Controlador.ctrlTablaClientes;
+import Controlador.ctrlVistaClientes;
 import Modelo.clientes;
 import Modelo.conexion;
 import javax.swing.table.*;
@@ -13,14 +13,14 @@ import javax.swing.table.*;
  *
  * @author java
  */
-public class vistaActivosCliente extends javax.swing.JFrame {
+public class vistaActivosClienteFinanza extends javax.swing.JFrame {
 
     DefaultTableModel modelotabla;
 
     /**
      * Creates new form CRUD
      */
-    public vistaActivosCliente() {
+    public vistaActivosClienteFinanza() {
         initComponents();
         this.modelotabla = (DefaultTableModel) tablaActivosInmobiliariosCliente.getModel();
         //listar();
@@ -113,14 +113,44 @@ public class vistaActivosCliente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vistaActivosCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaActivosClienteFinanza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vistaActivosCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaActivosClienteFinanza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vistaActivosCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaActivosClienteFinanza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vistaActivosCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaActivosClienteFinanza.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
