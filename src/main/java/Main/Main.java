@@ -13,7 +13,7 @@ import Vista.pantallaInicio;
  *
  * @author java
  */
-public class main2 {
+public class Main {
 
     public static void main(String[] args) {
         conexion modelo = new conexion();
