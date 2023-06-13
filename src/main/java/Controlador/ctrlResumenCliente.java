@@ -44,6 +44,9 @@ public class ctrlResumenCliente implements ActionListener {
         vista.intIngresos.setText(Double.toString(mod2.getIngresos()));
         vista.intCostes.setForeground(Color.red);
         vista.intIngresos.setForeground(Color.green);
+        vista.intIngresos.setBackground(Color.darkGray);
+        vista.intCostes.setBackground(Color.darkGray);
+        vista.intBalance.setBackground(Color.darkGray);
         if(mod2.getBalance()>0){
             vista.intBalance.setForeground(Color.green);
         }if(mod2.getBalance()<0){

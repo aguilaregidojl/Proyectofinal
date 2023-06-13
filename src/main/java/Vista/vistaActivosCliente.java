@@ -82,11 +82,11 @@ public class vistaActivosCliente extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nombre", "Tipo", "Ingreso Anual", "Coste Mantenimiento", "Coste Impuestos", "Valor", "Balance"
+                "ID", "Tipo", "Ingreso Anual", "Coste Mantenimiento", "Coste Impuestos", "Valor", "Balance"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true, true
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -114,7 +114,7 @@ public class vistaActivosCliente extends javax.swing.JFrame {
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true, true, true
+                false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
