@@ -50,7 +50,7 @@ public class ctrlResumenCliente implements ActionListener {
         }if(mod2.getBalance()<0){
             vista.intBalance.setForeground(Color.red);
         }if(mod2.getBalance()==0){
-            vista.intBalance.setForeground(Color.BLACK);
+            vista.intBalance.setForeground(Color.WHITE);
         }
     }
     
