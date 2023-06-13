@@ -71,13 +71,17 @@ public class resumenCliente extends javax.swing.JFrame {
         lblBalance.setText("Balance");
 
         intIngresos.setEditable(false);
+        intIngresos.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         intIngresos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         intCostes.setEditable(false);
+        intCostes.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         intCostes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         intBalance.setEditable(false);
+        intBalance.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         intBalance.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        intBalance.setOpaque(true);
 
         lblPregunta.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblPregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
