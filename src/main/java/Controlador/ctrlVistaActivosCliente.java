@@ -74,17 +74,40 @@ public class ctrlVistaActivosCliente implements ActionListener {
             vista.tablaActivosInmobiliariosCliente.setModel(modelotabla);
         } catch (SQLException err) {
         }
+        
+        String sql2 = "SELECT * FROM Finanzas";
+        try {
+            con = modelo.getConection();
+            st = con.createStatement();
+            rs = st.executeQuery(sql2);
+            Object[] finanza = new Object[8];
+            modelotabla = (DefaultTableModel) vista.tablaActivosInmobiliariosCliente.getModel();
+
+            while (rs.next()) {
+                finanza[0] = rs.getInt("idFinanzas");
+                finanza[1] = rs.getString("nombre");
+                finanza[2] = rs.getInt("TipoActivo_idTipoActivo");
+                finanza[3] = rs.getDouble("ingreso_anual");
+                finanza[4] = rs.getDouble("costes_mantenimiento");
+                finanza[5] = rs.getDouble("costes_impuestos");
+                finanza[6] = rs.getDouble("valor");
+                finanza[7] = rs.getDouble("balance");
+                modelotabla.addRow(finanza);
+            }
+            vista.tablaActivosInmobiliariosCliente.setModel(modelotabla);
+        } catch (SQLException err) {
+        }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnFinanzas) {
-            vista.tablaActivosFinancierosCliente.setVisible(true);
-            vista.tablaActivosInmobiliariosCliente.setVisible(false);
+            vista.panelFinancieros.setVisible(true);
+            vista.panelInmobiliarios.setVisible(false);
         }
         if (e.getSource() == vista.btnInmuebles) {
-            vista.tablaActivosInmobiliariosCliente.setVisible(false);
-            vista.tablaActivosFinancierosCliente.setVisible(true);
+            vista.panelFinancieros.setVisible(false);
+            vista.panelInmobiliarios.setVisible(true);
         }
         if (e.getSource() == vista.btnVolver) {
 
