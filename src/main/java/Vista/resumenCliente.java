@@ -81,7 +81,6 @@ public class resumenCliente extends javax.swing.JFrame {
         intBalance.setEditable(false);
         intBalance.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         intBalance.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        intBalance.setOpaque(true);
 
         lblPregunta.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblPregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
