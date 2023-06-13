@@ -31,6 +31,7 @@ public class loginCliente extends javax.swing.JFrame {
         textUsuariocliente = new javax.swing.JTextField();
         btnIngresocliente = new javax.swing.JButton();
         textContraseñaCliente = new javax.swing.JPasswordField();
+        btnVolvercliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,12 +39,10 @@ public class loginCliente extends javax.swing.JFrame {
         lblUsuariocliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUsuariocliente.setText("Usuario");
         lblUsuariocliente.setAlignmentX(0.5F);
-        lblUsuariocliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblContraseñacliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblContraseñacliente.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblContraseñacliente.setText("Contraseña");
-        lblContraseñacliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         textUsuariocliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         textUsuariocliente.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -62,26 +61,39 @@ public class loginCliente extends javax.swing.JFrame {
         textContraseñaCliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         textContraseñaCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        btnVolvercliente.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnVolvercliente.setText("Volver");
+        btnVolvercliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblContraseñacliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblUsuariocliente, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnIngresocliente, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblContraseñacliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblUsuariocliente, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnIngresocliente, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
                     .addComponent(textUsuariocliente)
-                    .addComponent(textContraseñaCliente))
-                .addContainerGap(127, Short.MAX_VALUE))
+                    .addComponent(textContraseñaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVolvercliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnIngresocliente, btnVolvercliente});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUsuariocliente)
                     .addComponent(textUsuariocliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -89,9 +101,11 @@ public class loginCliente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblContraseñacliente)
                     .addComponent(textContraseñaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addComponent(btnIngresocliente)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnIngresocliente)
+                    .addComponent(btnVolvercliente))
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -139,6 +153,7 @@ public class loginCliente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnIngresocliente;
+    public javax.swing.JButton btnVolvercliente;
     private javax.swing.JLabel lblContraseñacliente;
     private javax.swing.JLabel lblUsuariocliente;
     public javax.swing.JPasswordField textContraseñaCliente;
