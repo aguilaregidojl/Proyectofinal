@@ -4,10 +4,10 @@
  */
 package Main;
 
-import Controlador.ctrlVistaClientes;
+import Controlador.ctrlInicio;
 import Modelo.clientes;
 import Modelo.conexion;
-import Vista.vistaClientes;
+import Vista.pantallaInicio;
 
 /**
  *
@@ -16,13 +16,15 @@ import Vista.vistaClientes;
 public class Main {
 
     public static void main(String[] args) {
-        conexion conexion = new conexion();
+        conexion modelo = new conexion();
         clientes clientes = new clientes();
-        vistaClientes vista = new vistaClientes();
+        pantallaInicio vista = new pantallaInicio();
 
-        ctrlVistaClientes controlador = new ctrlVistaClientes(vista, conexion, clientes);
+        ctrlInicio controlador = new ctrlInicio(vista, modelo, clientes);
         controlador.iniciar();
+
         vista.setVisible(true);
+
     }
 
 }
