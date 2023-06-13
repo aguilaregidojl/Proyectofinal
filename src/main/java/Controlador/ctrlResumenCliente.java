@@ -9,7 +9,7 @@ import Modelo.conexion;
 import Modelo.modeloResumenCliente;
 import Swing.tablaClientes;
 import Vista.resumenCliente;
-import Vista.vistaActivosClienteFinanza;
+import Vista.vistaActivosClienteFinanzas;
 import Vista.vistaClientes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -47,7 +47,7 @@ public class ctrlResumenCliente implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==vista.btnFinancieros) {
-            vistaActivosClienteFinanza vista = new vistaActivosClienteFinanza();
+            vistaActivosClienteFinanzas vista = new vistaActivosClienteFinanzas();
             //ctrlVistaClientes ctrl = new ctrlVistaClientes(vista, modelo, clientes);
             //ctrl.iniciar();
             //vista.setVisible(true);

@@ -9,6 +9,7 @@ import Modelo.conexion;
 import Modelo.modeloLoginCliente;
 import Modelo.modeloResumenCliente;
 import Vista.loginCliente;
+import Vista.pantallaInicio;
 import Vista.resumenCliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,6 +29,7 @@ public class ctrlLoginCliente implements ActionListener {
         this.clientes = clientes;
         this.modelo = modelo;
         this.vista.btnIngresocliente.addActionListener(this);
+        this.vista.btnVolvercliente.addActionListener(this);
     }
 
     public void iniciar() {
@@ -52,6 +54,13 @@ public class ctrlLoginCliente implements ActionListener {
                 vista.textUsuariocliente.setText(null);
             }
 
+        }
+        if (e.getSource() == vista.btnVolvercliente) {
+            pantallaInicio vista2 = new pantallaInicio();
+            ctrlInicio ctrl2 = new ctrlInicio(vista2, modelo, clientes);
+            ctrl2.iniciar();
+            vista2.setVisible(true);
+            vista.setVisible(false);
         }
     }
 
