@@ -9,7 +9,7 @@ import Modelo.conexion;
 import Modelo.modeloResumenCliente;
 import Swing.tablaClientes;
 import Vista.resumenCliente;
-import Vista.vistaActivosClienteFinanzas;
+import Vista.vistaActivosCliente;
 import Vista.vistaClientes;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -32,8 +32,7 @@ public class ctrlResumenCliente implements ActionListener {
         this.modelo = modelo;
         this.clientes = clientes;
         this.mod2 = mod2;
-        this.vista.btnFinancieros.addActionListener(this);
-        this.vista.btnInmobiliarios.addActionListener(this);
+        this.vista.btnActivos.addActionListener(this);
 
     }
 
@@ -57,11 +56,13 @@ public class ctrlResumenCliente implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==vista.btnFinancieros) {
-            vistaActivosClienteFinanzas vista = new vistaActivosClienteFinanzas();
-            //ctrlVistaClientes ctrl = new ctrlVistaClientes(vista, modelo, clientes);
-            //ctrl.iniciar();
-            //vista.setVisible(true);
+        if (e.getSource()==vista.btnActivos) {
+            vistaActivosCliente vista2 = new vistaActivosCliente();
+            conexion mod = new conexion();
+            clientes clientes = new clientes();
+            ctrlVistaActivosCliente ctrl2 = new ctrlVistaActivosCliente(vista2, mod, clientes);
+            ctrl2.iniciar();
+            vista2.setVisible(true);
         }
     }
 
