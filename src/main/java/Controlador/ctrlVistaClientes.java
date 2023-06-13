@@ -80,19 +80,16 @@ public class ctrlVistaClientes implements ActionListener {
             vista.panelCrear.setVisible(true);
             vista.panelActualizar.setVisible(false);
             vista.panelBorrar.setVisible(false);
-            actutabla();
         }
         if (e.getSource() == vista.btnActualizar) {
             vista.panelCrear.setVisible(false);
             vista.panelActualizar.setVisible(true);
             vista.panelBorrar.setVisible(false);
-            actutabla();
         }
         if (e.getSource() == vista.btnBorrar) {
             vista.panelCrear.setVisible(false);
             vista.panelActualizar.setVisible(false);
             vista.panelBorrar.setVisible(true);
-            actutabla();
         }
         if (e.getSource() == vista.btnCancelarActualizar) {
             limpiarCajas();
@@ -157,7 +154,31 @@ public class ctrlVistaClientes implements ActionListener {
                 System.err.println(err);
             }
         }
-        
+
+        if (e.getSource() == vista.btnBorrarBorrar) {
+            int actid = Integer.parseInt(vista.intIdBorrar.getText());
+
+            try {
+                //con = getConection();
+                ps = con.prepareStatement("DELETE FROM Clientes WHERE idClientes='" + actid + "'");
+
+                int res = ps.executeUpdate();
+
+                if (res > 0) {
+                    JOptionPane.showMessageDialog(null, "Cliente borrado");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error al Borrar Cliente");
+                }
+                //TablaDatos.setModel(modelo);
+
+                limpiarCajas();
+                actutabla();
+                con.close();
+
+            } catch (HeadlessException | SQLException err) {
+                System.err.println(err);
+            }
+        }
     }
 
     public void listar() {

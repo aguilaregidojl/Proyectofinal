@@ -8,9 +8,11 @@ import Modelo.clientes;
 import Modelo.conexion;
 import Modelo.modeloLoginGestor;
 import Modelo.modeloResumenCliente;
+import Modelo.modeloResumenGestor;
 import Vista.loginGestor;
 import Vista.pantallaInicio;
 import Vista.resumenCliente;
+import Vista.resumenGestor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -43,9 +45,9 @@ public class ctrlLoginGestor implements ActionListener {
             modeloLoginGestor mod = new modeloLoginGestor();
             mod.validarusuario(vista.textusuariogestor, vista.textContraseñaGestor);
             if (mod.isValid() == true) {
-                resumenCliente vista2 = new resumenCliente();
-                modeloResumenCliente mod2 = new modeloResumenCliente();
-                ctrlResumenCliente ctrl = new ctrlResumenCliente(vista2, modelo, clientes, mod2);
+                resumenGestor vista2 = new resumenGestor();
+                modeloResumenGestor mod2 = new modeloResumenGestor();
+                ctrlResumenGestor ctrl = new ctrlResumenGestor(vista2, modelo, clientes, mod2);
                 ctrl.iniciar();
                 vista2.setVisible(true);
                 vista.setVisible(false);

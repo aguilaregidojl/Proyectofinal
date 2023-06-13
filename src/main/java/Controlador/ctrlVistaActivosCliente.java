@@ -28,6 +28,7 @@ public class ctrlVistaActivosCliente implements ActionListener {
     Connection con;
     PreparedStatement ps = null;
     DefaultTableModel modelotabla;
+    DefaultTableModel modelotabla2;
     Statement st;
     ResultSet rs;
     int id;
@@ -47,10 +48,11 @@ public class ctrlVistaActivosCliente implements ActionListener {
         vista.setLocationRelativeTo(null);
         id = clientes.getId();
         listar();
+        listar2();
         //mod2.listarResumen();
         //vista.intIngresos.setText(Double.toString(mod2.getIngresos()));
     }
-    
+
     public void listar() {
         String sql = "SELECT * FROM Inmuebles";
         try {
@@ -74,14 +76,17 @@ public class ctrlVistaActivosCliente implements ActionListener {
             vista.tablaActivosInmobiliariosCliente.setModel(modelotabla);
         } catch (SQLException err) {
         }
-        
+
+    }
+
+    public void listar2() {
         String sql2 = "SELECT * FROM Finanzas";
         try {
             con = modelo.getConection();
             st = con.createStatement();
             rs = st.executeQuery(sql2);
             Object[] finanza = new Object[8];
-            modelotabla = (DefaultTableModel) vista.tablaActivosInmobiliariosCliente.getModel();
+            modelotabla2 = (DefaultTableModel) vista.tablaActivosFinancierosCliente.getModel();
 
             while (rs.next()) {
                 finanza[0] = rs.getInt("idFinanzas");
@@ -92,9 +97,9 @@ public class ctrlVistaActivosCliente implements ActionListener {
                 finanza[5] = rs.getDouble("costes_impuestos");
                 finanza[6] = rs.getDouble("valor");
                 finanza[7] = rs.getDouble("balance");
-                modelotabla.addRow(finanza);
+                modelotabla2.addRow(finanza);
             }
-            vista.tablaActivosInmobiliariosCliente.setModel(modelotabla);
+            vista.tablaActivosFinancierosCliente.setModel(modelotabla2);
         } catch (SQLException err) {
         }
     }

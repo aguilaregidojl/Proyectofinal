@@ -25,17 +25,19 @@ public class modeloResumenGestor {
     int id;
 
     public void listarResumen() {
-        String sql = "SELECT * FROM Finanzas";
+        String sql = "SELECT SUM(Ingresos) FROM (SELECT ingreso_anual AS Ingresos FROM Finanzas UNION ALL SELECT ingresos_alquiler AS Ingresos FROM Inmuebles) AS Ingresos;";
+
         try {
-            //con = getConection();
-            st = con.createStatement();
-            rs = st.executeQuery(sql);
-            int ingresos = 0;
+            Modelo.conexion con = new Modelo.conexion();
+            ps = con.getConection().prepareStatement(sql);
+            //st = con.createStatement();
+            rs = ps.executeQuery(sql);
 
             while (rs.next()) {
-                ingresos = rs.getInt("Ingresos");
-            }
+                //double ingresos = rs.getDouble("SUM(Ingresos)");
+                //clientes.setIngresos(ingresos);
 
+            }
         } catch (SQLException err) {
         }
     }

@@ -44,7 +44,7 @@ public class vistaActivosCliente extends javax.swing.JFrame {
         panelInmobiliarios = new javax.swing.JScrollPane();
         tablaActivosInmobiliariosCliente = new javax.swing.JTable();
         panelFinancieros = new javax.swing.JScrollPane();
-        tablaActivosFinancieros = new javax.swing.JTable();
+        tablaActivosFinancierosCliente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CRUD MySQL");
@@ -105,7 +105,7 @@ public class vistaActivosCliente extends javax.swing.JFrame {
         jLayeredPane1.add(panelInmobiliarios);
         panelInmobiliarios.setBounds(10, 10, 510, 400);
 
-        tablaActivosFinancieros.setModel(new javax.swing.table.DefaultTableModel(
+        tablaActivosFinancierosCliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -121,13 +121,13 @@ public class vistaActivosCliente extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablaActivosFinancieros.setPreferredSize(new java.awt.Dimension(450, 300));
-        panelFinancieros.setViewportView(tablaActivosFinancieros);
-        if (tablaActivosFinancieros.getColumnModel().getColumnCount() > 0) {
-            tablaActivosFinancieros.getColumnModel().getColumn(0).setPreferredWidth(100);
-            tablaActivosFinancieros.getColumnModel().getColumn(1).setPreferredWidth(100);
-            tablaActivosFinancieros.getColumnModel().getColumn(2).setPreferredWidth(100);
-            tablaActivosFinancieros.getColumnModel().getColumn(3).setPreferredWidth(100);
+        tablaActivosFinancierosCliente.setPreferredSize(new java.awt.Dimension(450, 300));
+        panelFinancieros.setViewportView(tablaActivosFinancierosCliente);
+        if (tablaActivosFinancierosCliente.getColumnModel().getColumnCount() > 0) {
+            tablaActivosFinancierosCliente.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tablaActivosFinancierosCliente.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tablaActivosFinancierosCliente.getColumnModel().getColumn(2).setPreferredWidth(100);
+            tablaActivosFinancierosCliente.getColumnModel().getColumn(3).setPreferredWidth(100);
         }
 
         jLayeredPane1.add(panelFinancieros);
@@ -418,7 +418,7 @@ public class vistaActivosCliente extends javax.swing.JFrame {
     private javax.swing.JLayeredPane jLayeredPane1;
     public javax.swing.JScrollPane panelFinancieros;
     public javax.swing.JScrollPane panelInmobiliarios;
-    public javax.swing.JTable tablaActivosFinancieros;
+    public javax.swing.JTable tablaActivosFinancierosCliente;
     public javax.swing.JTable tablaActivosInmobiliariosCliente;
     // End of variables declaration//GEN-END:variables
 }
