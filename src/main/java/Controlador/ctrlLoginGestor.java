@@ -46,6 +46,7 @@ public class ctrlLoginGestor implements ActionListener {
                 ctrlResumenCliente ctrl = new ctrlResumenCliente(vista2, modelo, clientes, mod2);
                 ctrl.iniciar();
                 vista2.setVisible(true);
+                vista.setVisible(false);
             } else {
                 vista.textContraseñaGestor.setText(null);
                 vista.textusuariogestor.setText(null);

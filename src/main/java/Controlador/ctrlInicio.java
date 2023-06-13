@@ -38,16 +38,18 @@ public class ctrlInicio implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnTipocliente) {
-            loginCliente vista = new loginCliente();
-            ctrlLoginCliente ctrl = new ctrlLoginCliente(vista, modelo, clientes);
+            loginCliente vista2 = new loginCliente();
+            ctrlLoginCliente ctrl = new ctrlLoginCliente(vista2, modelo, clientes);
             ctrl.iniciar();
-            vista.setVisible(true);
+            vista2.setVisible(true);
+            vista.setVisible(false);
         }
         if (e.getSource() == vista.btnTipogestor) {
-            loginGestor vista = new loginGestor();
-            ctrlLoginGestor ctrl = new ctrlLoginGestor(vista, modelo, clientes);
+            loginGestor vista2 = new loginGestor();
+            ctrlLoginGestor ctrl = new ctrlLoginGestor(vista2, modelo, clientes);
             ctrl.iniciar();
-            vista.setVisible(true);
+            vista2.setVisible(true);
+            vista.setVisible(false);
         }
     }
 
