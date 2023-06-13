@@ -29,6 +29,8 @@ public class modeloResumenCliente {
     ResultSet rs;
     int id;
     double ingresos;
+    double costes;
+    double balance;
 
     clientes clientes = new clientes();
 
