@@ -28,8 +28,7 @@ public class resumenCliente extends javax.swing.JFrame {
 
         lbleuros2 = new javax.swing.JLabel();
         lblClientes = new javax.swing.JLabel();
-        btnInmobiliarios = new javax.swing.JButton();
-        btnFinancieros = new javax.swing.JButton();
+        btnActivos = new javax.swing.JButton();
         lblResumen = new javax.swing.JLabel();
         lblTotalingresos = new javax.swing.JLabel();
         lblTotalcostes = new javax.swing.JLabel();
@@ -37,7 +36,6 @@ public class resumenCliente extends javax.swing.JFrame {
         intIngresos = new javax.swing.JTextField();
         intCostes = new javax.swing.JTextField();
         intBalance = new javax.swing.JTextField();
-        lblPregunta = new javax.swing.JLabel();
         lblNombrecliente = new javax.swing.JLabel();
         lbleuros = new javax.swing.JLabel();
         lbleuros1 = new javax.swing.JLabel();
@@ -49,11 +47,8 @@ public class resumenCliente extends javax.swing.JFrame {
         lblClientes.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lblClientes.setText("Bienvenido");
 
-        btnInmobiliarios.setText("Inmobiliarios");
-        btnInmobiliarios.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        btnFinancieros.setText("Financieros");
-        btnFinancieros.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnActivos.setText("Consultar Activos");
+        btnActivos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblResumen.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblResumen.setText("RESUMEN ");
@@ -83,10 +78,6 @@ public class resumenCliente extends javax.swing.JFrame {
         intBalance.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         intBalance.setOpaque(true);
 
-        lblPregunta.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lblPregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPregunta.setText("¿Qué tipo de activo quieres consultar?");
-
         lblNombrecliente.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
         lbleuros.setText("€");
@@ -104,41 +95,34 @@ public class resumenCliente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblResumen)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 55, Short.MAX_VALUE))
                     .addComponent(lblNombrecliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(78, 78, 78))
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(btnInmobiliarios, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                .addGap(73, 73, 73)
-                .addComponent(btnFinancieros, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                .addGap(45, 45, 45))
-            .addGroup(layout.createSequentialGroup()
+                .addGap(103, 103, 103)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(intBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblTotalcostes, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(intCostes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblTotalingresos)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(intIngresos, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbleuros)
-                            .addComponent(lbleuros1)
-                            .addComponent(lbleuros2)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(lblPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(intBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblTotalcostes, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(intCostes, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblTotalingresos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(intIngresos, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbleuros)
+                    .addComponent(lbleuros1)
+                    .addComponent(lbleuros2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnActivos, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(123, 123, 123))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,13 +159,9 @@ public class resumenCliente extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbleuros2)
                             .addComponent(intBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnInmobiliarios)
-                    .addComponent(btnFinancieros))
-                .addGap(50, 50, 50))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(btnActivos)
+                .addGap(49, 49, 49))
         );
 
         pack();
@@ -224,15 +204,13 @@ public class resumenCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnFinancieros;
-    public javax.swing.JButton btnInmobiliarios;
+    public javax.swing.JButton btnActivos;
     public javax.swing.JTextField intBalance;
     public javax.swing.JTextField intCostes;
     public javax.swing.JTextField intIngresos;
     private javax.swing.JLabel lblBalance;
     private javax.swing.JLabel lblClientes;
     public javax.swing.JLabel lblNombrecliente;
-    private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblResumen;
     private javax.swing.JLabel lblTotalcostes;
     private javax.swing.JLabel lblTotalingresos;

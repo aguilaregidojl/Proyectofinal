@@ -13,14 +13,14 @@ import javax.swing.table.*;
  *
  * @author java
  */
-public class vistaActivosClienteFinanzas extends javax.swing.JFrame {
+public class vistaActivosCliente extends javax.swing.JFrame {
 
     DefaultTableModel modelotabla;
 
     /**
      * Creates new form CRUD
      */
-    public vistaActivosClienteFinanzas() {
+    public vistaActivosCliente() {
         initComponents();
         this.modelotabla = (DefaultTableModel) tablaActivosInmobiliariosCliente.getModel();
         //listar();
@@ -37,10 +37,14 @@ public class vistaActivosClienteFinanzas extends javax.swing.JFrame {
 
         Menu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        btnFinanzas = new javax.swing.JButton();
+        btnInmuebles = new javax.swing.JButton();
         btnVolver = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaActivosInmobiliariosCliente = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tablaActivosFinancierosCliente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CRUD MySQL");
@@ -49,8 +53,20 @@ public class vistaActivosClienteFinanzas extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(733, 480));
         getContentPane().setLayout(null);
 
-        jLabel1.setText("¿Qué quieres hacer?");
+        jLabel1.setText("¿Qué quieres ver?");
         Menu.add(jLabel1);
+
+        btnFinanzas.setText("Finanzas");
+        btnFinanzas.setMaximumSize(new java.awt.Dimension(83, 22));
+        btnFinanzas.setMinimumSize(new java.awt.Dimension(83, 22));
+        btnFinanzas.setPreferredSize(new java.awt.Dimension(83, 22));
+        Menu.add(btnFinanzas);
+
+        btnInmuebles.setText("Inmuebles");
+        btnInmuebles.setMaximumSize(new java.awt.Dimension(83, 22));
+        btnInmuebles.setMinimumSize(new java.awt.Dimension(83, 22));
+        btnInmuebles.setPreferredSize(new java.awt.Dimension(83, 22));
+        Menu.add(btnInmuebles);
 
         btnVolver.setText("Volver");
         btnVolver.setMaximumSize(new java.awt.Dimension(83, 22));
@@ -87,10 +103,38 @@ public class vistaActivosClienteFinanzas extends javax.swing.JFrame {
         }
 
         jLayeredPane1.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 10, 320, 400);
+        jScrollPane1.setBounds(10, 10, 510, 400);
+
+        tablaActivosFinancierosCliente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Tipo", "Valor", "Ingresos Alquiler", "Costes Comunidad", "Costes Impuestos", "Costes Servicios", "Balance"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, true, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablaActivosFinancierosCliente.setPreferredSize(new java.awt.Dimension(450, 300));
+        jScrollPane2.setViewportView(tablaActivosFinancierosCliente);
+        if (tablaActivosFinancierosCliente.getColumnModel().getColumnCount() > 0) {
+            tablaActivosFinancierosCliente.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tablaActivosFinancierosCliente.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tablaActivosFinancierosCliente.getColumnModel().getColumn(2).setPreferredWidth(100);
+            tablaActivosFinancierosCliente.getColumnModel().getColumn(3).setPreferredWidth(100);
+        }
+
+        jLayeredPane1.add(jScrollPane2);
+        jScrollPane2.setBounds(10, 10, 510, 400);
 
         getContentPane().add(jLayeredPane1);
-        jLayeredPane1.setBounds(124, 6, 340, 410);
+        jLayeredPane1.setBounds(124, 6, 580, 410);
 
         pack();
         setLocationRelativeTo(null);
@@ -113,14 +157,134 @@ public class vistaActivosClienteFinanzas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vistaActivosClienteFinanzas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaActivosCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vistaActivosClienteFinanzas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaActivosCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vistaActivosClienteFinanzas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaActivosCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vistaActivosClienteFinanzas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vistaActivosCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new vistaClientes().setVisible(true);
+            }
+
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -247,10 +411,14 @@ public class vistaActivosClienteFinanzas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Menu;
+    public javax.swing.JButton btnFinanzas;
+    public javax.swing.JButton btnInmuebles;
     public javax.swing.JButton btnVolver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JTable tablaActivosFinancierosCliente;
     public javax.swing.JTable tablaActivosInmobiliariosCliente;
     // End of variables declaration//GEN-END:variables
 }
